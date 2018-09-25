@@ -69,8 +69,15 @@ $('#registration-form').submit(function(e){
 smoothScroll.init();
 
 $( document ).ready(function() {
-    const tilt = $('.partner-box').tilt({glare: true,
-        maxGlare: .5,scale: 1.2});
+    const tilt = $('.partner-box').tilt(
+        {
+            glare: true,
+            maxGlare: .5,
+            scale: 1.2,
+            perspective: 50,
+            speed: 500, 
+        }
+    );
     tilt.on('change', callback);  // parameters: event, transforms
     tilt.on('tilt.mouseLeave', callback); // parameters: event
     tilt.on('tilt.mouseEnter', callback); // parameters: event
