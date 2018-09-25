@@ -10,6 +10,11 @@ html {
   font-size: 16px;
 }
 
+.logo img{
+  width: 200px;
+}
+
+
 body {
   color: #4e4e4e;
   font-family: 'Roboto', sans-serif;
@@ -21,7 +26,7 @@ body {
 }
 
 a {
-  color: #76059b;
+  color: #801484;
 }
 a:focus {
   outline: none;
@@ -77,7 +82,7 @@ ul li {
   font-size: 1.5em;
 }
 .social-block li a:hover, .social-block li a:focus {
-  color: #76059b;
+  color: #801484;
 }
 
 .btn.active.focus,
@@ -191,21 +196,21 @@ ul li {
  * 3.4 Helper Class: button
  */
 .btn-white {
-  color: #76059b;
+  color: #801484;
   background-color: #fff;
 }
 .btn-white:hover, .btn-white:focus {
-  color: #76059b;
+  color: #801484;
   background-color: #fff;
 }
 
 .btn-black {
   color: #fff;
-  background-color: #76059b;
+  background-color: #801484;
 }
 .btn-black:hover, .btn-black:focus {
   color: #fff;
-  background-color: #76059b;
+  background-color: #801484;
 }
 
 /* 
@@ -224,10 +229,10 @@ ul li {
 }
 
 .bg-image-1 {
-  background: url(../images/backgrounds/bg-1.jpg) no-repeat center center/cover;
+  background: url(../images/backgrounds/bg.png) no-repeat center center/cover;
 }
 .bg-image-1::before {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.35);
 }
 
 .bg-image-2 {
@@ -258,7 +263,7 @@ ul li {
   margin: 0;
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: #76059b;
+  background-color: #801484;
   -webkit-transition: all 0.2s linear 0s;
           transition: all 0.2s linear 0s;
 }
@@ -290,7 +295,7 @@ ul li {
 }
 
 .navbar-solid {
-  background-color: #76059b !important;
+  background-color: #801484 !important;
   padding: 0 !important;
   -webkit-transition: all 0.2s linear 0s;
           transition: all 0.2s linear 0s;
@@ -322,7 +327,8 @@ ul li {
   min-height: 100vh;
   position: relative;
   text-align: center;
-  background: url(../images/backgrounds/header.jpg) no-repeat center center/cover;
+  /* background: url(../images/backgrounds/header.jpg) no-repeat center center/cover; */
+  background: linear-gradient(to bottom right, #d40d87, #801484);
   display: table;
 }
 .site-header::before {
@@ -354,6 +360,7 @@ ul li {
 .site-header .intro h1 {
   margin-top: 0px;
   font-size: 30px;
+  font-size: 100px;
 }
 .site-header .intro p {
   font-size: 20px;
@@ -434,7 +441,7 @@ ul li {
  */
 .schedule-box {
   position: relative;
-  background-color: #76059b;
+  background-color: #801484;
   color: #fff;
   text-align: center;
   padding: 50px 0;
@@ -458,7 +465,7 @@ ul li {
 }
 .partner .partner-box {
   display: block;
-  opacity: 0.3;
+  opacity: 0.6;
   height: 150px;
   width: 150px;
   margin: 25px auto;
@@ -469,15 +476,15 @@ ul li {
   opacity: 1;
 }
 .partner .partner-box-1 {
-  background: url(../images/partner/partner-1.png) no-repeat center center/contain;
+  background: url(../images/partner/manosNobles.jpg) no-repeat center center/contain;
 }
 .partner .partner-box-2 {
-  background: url(../images/partner/partner-2.png) no-repeat center center/contain;
+  background: url(../images/partner/unne.jpg) no-repeat center center/contain;
 }
 .partner .partner-box-3 {
-  background: url(../images/partner/partner-3.png) no-repeat center center/contain;
+  background: url(../images/partner/manosVerdes.jpeg) no-repeat center center/contain;
 }
-.partner .partner-box-4 {
+/* .partner .partner-box-4 {
   background: url(../images/partner/partner-4.png) no-repeat center center/contain;
 }
 .partner .partner-box-5 {
@@ -491,7 +498,7 @@ ul li {
 }
 .partner .partner-box-8 {
   background: url(../images/partner/partner-8.png) no-repeat center center/contain;
-}
+} */
 
 /* 
  * 6.8 Section: FAQ
@@ -518,8 +525,8 @@ ul li {
 }
 .faq .panel-default > .panel-heading {
   color: #FFF;
-  background-color: #76059b;
-  border-color: #76059b;
+  background-color: #801484;
+  border-color: #801484;
   border-radius: 0;
   padding: 0;
 }
@@ -586,7 +593,7 @@ ul li {
  * 7.0 Site-footer
  */
 .site-footer {
-  background-color: #76059b;
+  background-color: #801484;
   color: #fff;
   text-align: center;
   padding: 30px 0;
