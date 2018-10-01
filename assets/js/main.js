@@ -74,7 +74,7 @@ $( document ).ready(function() {
             glare: true,
             maxGlare: .5,
             scale: 1.2,
-            perspective: 50,
+            perspective: 300,
             speed: 500, 
         }
     );
