@@ -756,3 +756,7 @@ ul li {
 .mcc {
   height: 215px;
 }
+
+.img-responsive{
+  border-radius: 5px;
+}
