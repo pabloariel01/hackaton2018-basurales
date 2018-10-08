@@ -8,6 +8,7 @@
  html {
    font-family: 'Roboto', sans-serif;
    font-size: 16px;
+   text-align: justify;
  }
  
  .logo img{
@@ -468,7 +469,7 @@
  }
  
  .text-muted{
-   color: #1d1515
+   color: #86354b;
  }
  /* 
   * 6.7 Section: Schedule
@@ -672,6 +673,7 @@
    position: relative;
    -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+   background: #55b99d;
  }
  .timeline > li > .timeline-panel:before {
    position: absolute;
@@ -774,12 +776,36 @@
  
  
  @media 
-   only screen and (max-width: 760px)  {
+   only screen and (max-width: 760px),
+   (min-device-width: 768px) and (max-device-width: 1024px)  {
      html,header, body{
       max-width: 100%;
+      width: fit-content;
+     }
+     .site-header .intro h1{
+       font-size: 60px;
      }
  }
- 
+
+ /* Landscape */
+@media screen and (orientation:landscape) {
+  /* Landscape styles here */
+  .site-header .intro h1{
+    font-size: 40px;
+  }
+  .logo img {
+    width: 50%;
+    margin-top: 5px;
+  }
+  #site-nav{
+    padding-bottom: 0px;
+    padding-top: 0px;
+    height: 20%;
+  }
+  .site-header .intro{
+    top: 14px;
+  }
+}
  
  .egg:hover {
    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both infinite;
