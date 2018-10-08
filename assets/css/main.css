@@ -805,6 +805,10 @@
   .site-header .intro{
     top: 14px;
   }
+
+  .about p{
+    margin-right: 10px;
+  }
 }
  
  .egg:hover {
