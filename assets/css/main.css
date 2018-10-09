@@ -234,10 +234,11 @@
  }
  .bg-image-1::before {
    background-color: rgba(0, 0, 0, 0.35);
+   margin-bottom: 10px;
  }
  
  .bg-image-2 {
-   background: url(../images/backgrounds/bg-2.jpg) no-repeat center bottom/cover;
+   /* background: url(../images/backgrounds/bg-2.jpg) no-repeat center bottom/cover; */
  }
  .bg-image-2::before {
    background-color: rgba(0, 0, 0, 0.7);
@@ -322,15 +323,23 @@
  /* 
   * 5.0 Site Header
   */
+
+  
  .site-header {
    width: 100%;
    height: 100%;
    min-height: 100vh;
    position: relative;
    text-align: center;
-   /* background: url(../images/backgrounds/header.jpg) no-repeat center center/cover; */
-   background: linear-gradient(to bottom right, #3ce0b3, #237760);
+   background: url(../images/backgrounds/header1.jpg) no-repeat center center/cover;
+   /* background: linear-gradient(to bottom right, #3ce0b3, #237760); */
    display: table;
+ }
+
+ @media screen and (orientation:landscape) {
+  .site-header {
+    background: url(../images/backgrounds/wideheader.jpg) no-repeat center center/cover;
+  }
  }
  .site-header::before {
    content: "";
@@ -432,6 +441,17 @@
  /* 
   * 6.5 Section: Contribution
   */
+
+
+  .price{   
+    font-size: -webkit-xxx-large;
+   }
+   .first{
+    color:rgb(247, 215, 35);
+   }
+   .second{
+    color:rgb(221, 154, 46);
+   }
  .contribution {
    text-align: center;
    color: #fff;
@@ -457,6 +477,10 @@
    text-align: center;
    padding: 50px 0;
    margin: 25px 0 0;
+ }
+
+ .schedule-box p{
+  margin: 10px;
  }
  .schedule-box::before {
    content: '';
@@ -510,9 +534,12 @@
  .partner .partner-box-7 {
    background: url(../images/partner/gigared.svg) no-repeat center center/contain;
  }
- /* .partner .partner-box-8 {
-   background: url(../images/partner/partner-8.png) no-repeat center center/contain;
- } */
+ .partner .partner-box-8 {
+   background: url(../images/partner/unnetec.jpg) no-repeat center center/contain;
+ }
+ .partner .partner-box-9 {
+   background: url(../images/partner/agentia.jpg) no-repeat center center/contain;
+ }
  
  /* 
   * 6.8 Section: FAQ
@@ -785,31 +812,32 @@
      .site-header .intro h1{
        font-size: 60px;
      }
+
+     /* Landscape */
+    @media screen and (orientation:landscape) {
+      /* Landscape styles here */
+      .site-header .intro h1{
+        font-size: 40px;
+      }
+      .logo img {
+        width: 50%;
+        margin-top: 5px;
+      }
+      #site-nav{
+        padding-bottom: 0px;
+        padding-top: 0px;
+        height: 20%;
+      }
+      .site-header .intro{
+        top: 14px;
+      }
+    
+      .about p{
+        margin-right: 10px;
+      }
+    }
  }
 
- /* Landscape */
-@media screen and (orientation:landscape) {
-  /* Landscape styles here */
-  .site-header .intro h1{
-    font-size: 40px;
-  }
-  .logo img {
-    width: 50%;
-    margin-top: 5px;
-  }
-  #site-nav{
-    padding-bottom: 0px;
-    padding-top: 0px;
-    height: 20%;
-  }
-  .site-header .intro{
-    top: 14px;
-  }
-
-  .about p{
-    margin-right: 10px;
-  }
-}
  
  .egg:hover {
    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both infinite;
@@ -864,3 +892,4 @@
      transform: translate3d(0, -12px, 0);
    }
  }
+
