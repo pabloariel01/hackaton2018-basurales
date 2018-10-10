@@ -450,7 +450,10 @@
     color:rgb(247, 215, 35);
    }
    .second{
-    color:rgb(221, 154, 46);
+    color:silver;
+   }
+   .ticket{
+    color: #daa646;
    }
  .contribution {
    text-align: center;
@@ -471,6 +474,7 @@
   }
  
  .schedule-box {
+   min-height: 295px; 
    position: relative;
    background-color: #237760;
    color: #fff;
@@ -492,6 +496,7 @@
    border: 1px solid #fff;
  }
  
+
  .text-muted{
    color: #86354b;
  }
@@ -801,9 +806,24 @@
    color: aliceblue;
  }
  
- 
  @media 
-   only screen and (max-width: 760px),
+   only screen and (max-width: 760px){
+    .logo img {
+      width: 50%;
+    }
+
+   }
+
+ @media (min-width: 768px){
+  .container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header{
+    margin-right: -15px;
+
+  }
+
+   }
+
+ @media 
+   only screen and (max-width: 768px),
    (min-device-width: 768px) and (max-device-width: 1024px)  {
      html,header, body{
       max-width: 100%;
@@ -826,7 +846,7 @@
       #site-nav{
         padding-bottom: 0px;
         padding-top: 0px;
-        height: 20%;
+        max-height: 20%;
       }
       .site-header .intro{
         top: 14px;
