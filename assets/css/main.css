@@ -24,6 +24,7 @@
    line-height: 1.6;
    position: relative;
    -webkit-font-smoothing: antialiased;
+   overflow-x: hidden;
  }
  
  a {
@@ -307,6 +308,7 @@
    float: left;
    margin-top: 0;
    margin-left: 10px;
+   max-width: 70%;
  }
  .site-branding .logo {
    color: #fff;
@@ -339,6 +341,9 @@
  @media screen and (orientation:landscape) {
   .site-header {
     background: url(../images/backgrounds/wideheader.jpg) no-repeat center center/cover;
+  }
+  #navbar-items.collapse.in,#navbar-items.collapsing{
+    background-color: #237760;
   }
  }
  .site-header::before {
@@ -377,7 +382,9 @@
    margin-bottom: 10px;
    font-weight: 300;
  }
- 
+ .site-header .intro .bases{
+   color: white;
+ }
  @media (min-width: 768px) {
    .navbar-custom {
      background-color: transparent;
@@ -445,6 +452,7 @@
 
   .price{   
     font-size: -webkit-xxx-large;
+    font-size: 3em;
    }
    .first{
     color:rgb(247, 215, 35);
