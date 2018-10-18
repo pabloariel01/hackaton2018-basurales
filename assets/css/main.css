@@ -333,19 +333,31 @@
    min-height: 100vh;
    position: relative;
    text-align: center;
-   background: url(../images/backgrounds/header1.jpg) no-repeat center center/cover;
+   background: url(../images/backgrounds/wideheader-800.jpg) no-repeat center center/cover;
    /* background: linear-gradient(to bottom right, #3ce0b3, #237760); */
    display: table;
  }
 
  @media screen and (orientation:landscape) {
-  .site-header {
-    background: url(../images/backgrounds/wideheader.jpg) no-repeat center center/cover;
-  }
+   .site-header {
+     background: url(../images/backgrounds/wideheader-800.jpg) no-repeat center center/cover;
+   }
   #navbar-items.collapse.in,#navbar-items.collapsing{
     background-color: #237760;
   }
  }
+
+
+@media(max-width: 480px){
+ .site-header {
+    background: url(../images/backgrounds/wideheader-480.jpg) no-repeat center center/cover;
+  }
+}
+@media(max-width: 320px){
+ .site-header {
+    background: url(../images/backgrounds/wideheader-320.jpg) no-repeat center center/cover;
+  }
+}
  .site-header::before {
    content: "";
    position: absolute;
@@ -837,6 +849,9 @@
       max-width: 100%;
       width: fit-content;
      }
+     .navbar-header{
+       max-width: 768px;
+     }
      .site-header .intro h1{
        font-size: 60px;
      }
@@ -901,23 +916,64 @@
  }
  
  @keyframes upp {
-   0% {
-     transform: translate3d(0,3px,0);
-   }
-   10% {
-     transform: translate3d(0, 0px, 0);
-   }
-   
-   30% {
-     transform: translate3d(0, -4px, 0);
-   }
- 
-   60% {
-     transform: translate3d(0, -8px, 0);
-   }
- 
-   80% {
-     transform: translate3d(0, -12px, 0);
-   }
- }
+  0% {
+    transform: translate3d(0,3px,0);
+  }
+  10% {
+    transform: translate3d(0, 0px, 0);
+  }
+  
+  30% {
+    transform: translate3d(0, -4px, 0);
+  }
 
+  60% {
+    transform: translate3d(0, -8px, 0);
+  }
+
+  80% {
+    transform: translate3d(0, -12px, 0);
+  }
+}
+
+.share:hover {
+  animation: fa-spin 2s infinite linear;
+  /* animation:  1s upp ease-in both infinite; */
+  
+  /* transform: translate3d(0, 0, 0); */
+  /* backface-visibility: hidden; */
+  perspective: 1000px;
+}
+
+.paper:hover {
+  animation:  2.5s paper linear infinite;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+
+@keyframes paper {
+  0% {
+    transform: rotate(0deg) scale(0.9); 
+  }
+  10% {
+   transform: rotate(90deg) scale(1.1); 
+  }
+  
+  30% {
+   transform: rotate(180deg) scale(1.4); 
+  }
+
+  60% {
+   transform: rotate(270deg) scale(1.3); ;
+  }
+
+  80% {
+   transform: rotate(350deg) scale(1.1); 
+  }
+
+  100%{
+
+  }
+}

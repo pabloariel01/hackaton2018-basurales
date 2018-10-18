@@ -1,24 +1,57 @@
+<?php 
+// header("Cache-Control: no-cache, no-store, must-revalidate"); // HTTP 1.1.
+// header("Pragma: no-cache"); // HTTP 1.0.
+// header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
+
+session_start();
+$counter_name = "counter.txt";
+
+// Check if a text file exists.
+// If not create one and initialize it to zero.
+if (!file_exists($counter_name)) {
+- $f = fopen($counter_name, "w");
+- fwrite($f,"0");
+- fclose($f);
+}
+
+// Read the current value of our counter file
+$f = fopen($counter_name,"r");
+$counterVal = fread($f, filesize($counter_name));
+fclose($f);
+
+// Has visitor been counted in this session?
+// If not, increase counter value by one
+if(!isset($_SESSION['hasVisited'])){
+- $_SESSION['hasVisited']="yes";
+- $counterVal++;
+- $f = fopen($counter_name, "w");
+- fwrite($f, $counterVal);
+- fclose($f);
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name=viewport content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
     <title>Hackathon</title>
 
     <!-- css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="bower_components/ionicons/css/ionicons.min.css">
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/main.css?ver=1.1">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
         crossorigin="anonymous">
 
 </head>
+
+
+
 
 <body data-spy="scroll" data-target="#site-nav">
     <nav id="site-nav" class="navbar navbar-fixed-top navbar-custom">
@@ -141,8 +174,9 @@
 
                 </div>
                 <div class="col-sm-3">
-
-                    <i class="ion-android-share-alt"></i>
+                    <div class="share">
+                        <i class="ion-android-share-alt"></i>
+                    </div>
                     <h3>Conocé gente y<br> creá vinculos</h3>
 
                 </div>
@@ -154,8 +188,9 @@
 
                 </div>
                 <div class="col-sm-3">
-
-                    <i class="ion-ios-paper"></i>
+                    <div class="paper">
+                        <i class="ion-ios-paper"></i>
+                    </div>
                     <!-- <h3>Corrientes<br>Argentina</h3> -->
                     <h3>Reconocimiento y <br>Publicación de tu idea</h3>
 
@@ -354,8 +389,8 @@
                                 <div class="panel-body">
                                     <!-- <h3>Hello</h3> -->
                                     <p>
-                                        ¡No! La inscripción es gratuita. Podes inscribirte ingresando en <a href="">este
-                                            link</a>
+                                        ¡No! La inscripción es gratuita. Podes inscribirte ingresando en <a href="https://goo.gl/forms/nffilMgAMlWcI3Nj1">este
+                                            link</a>.
                                     </p>
                                 </div>
                             </div>
