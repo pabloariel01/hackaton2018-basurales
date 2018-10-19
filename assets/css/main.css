@@ -466,11 +466,22 @@
     font-size: -webkit-xxx-large;
     font-size: 3em;
    }
+
+   .sorteos{
+     margin-top: 1em;
+   }
+   
    .first{
     color:rgb(247, 215, 35);
    }
    .second{
     color:silver;
+   }
+   .third{
+    color:black;
+   }
+   .forth{
+    color:black;
    }
    .ticket{
     color: #daa646;
@@ -494,7 +505,7 @@
   }
  
  .schedule-box {
-   min-height: 295px; 
+   min-height: 270px; 
    position: relative;
    background-color: #237760;
    color: #fff;

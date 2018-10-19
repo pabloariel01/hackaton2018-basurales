@@ -3,8 +3,10 @@
 // header("Pragma: no-cache"); // HTTP 1.0.
 // header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
 
+
 session_start();
 $counter_name = "counter.txt";
+$iplogfile = 'logs/ip-address-mainsite.html';
 
 // Check if a text file exists.
 // If not create one and initialize it to zero.
@@ -27,6 +29,15 @@ if(!isset($_SESSION['hasVisited'])){
 - $f = fopen($counter_name, "w");
 - fwrite($f, $counterVal);
 - fclose($f);
+
+    $ipaddress = $_SERVER['REMOTE_ADDR'];
+    $webpage = $_SERVER['SCRIPT_NAME'];
+    $timestamp = date('d/m/Y h:i:s');
+    $browser = $_SERVER['HTTP_USER_AGENT'];
+    $fp = fopen($iplogfile, 'a+');
+    chmod($iplogfile, 0777);
+    fwrite($fp, '['.$timestamp.']: -- '.$ipaddress.'  -- '.$webpage.' -- '.$browser. "\n<br><br>");
+    fclose($fp);
 }
 ?>
 <!DOCTYPE html>
@@ -214,22 +225,44 @@ if(!isset($_SESSION['hasVisited'])){
                     <div class="col-md-4 col-sm-6 winner-box">
                         <div class="schedule-box">
                             <div class="price first">
-                                <i class="fas fa-trophy"></i>
+                                <i class="fas fa-map-marked-alt"></i>
                             </div>
-                            <h3>Primer Puesto</h3>
-                            <p>¡Un viaje a los Esteros del Ibera!</p>
+                            <h3>Viaje a los esteros del Ibera</h3>
+                            <p>
+
+                            </p>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-6 winner-box">
                         <div class="schedule-box">
                             <div class="price second">
-                                <i class="fas fa-trophy"></i>
+                                <i class="fas fa-tablet-alt"></i>
                             </div>
-                            <h3>Segundo Puesto</h3>
-                            <p>3 Tablets</p>
+                            <h3>Tablets</h3>
+                            <p> </p>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-6 winner-box">
+                        <div class="schedule-box">
+                            <div class="price third">
+                                <i class="far fa-clock"></i>
+                            </div>
+                            <h3>Smartwatchs</h3>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 winner-box">
+                        <div class="schedule-box">
+                            <div class="price forth">
+                                    <i class="fas fa-headphones-alt"></i>
+                            </div>
+                            <h3>Auriculares</h3>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row sorteos ">
+                    <div class="col-md-4 col-sm-6 col-sm-offset-4 winner-box">
                         <div class="schedule-box">
                             <div class="price ticket">
                                 <i class="fas fa-ticket-alt"></i>
