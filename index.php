@@ -58,7 +58,9 @@ if(!isset($_SESSION['hasVisited'])){
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
         crossorigin="anonymous">
-
+    <!-- Animate css -->
+    <!-- <link rel="stylesheet" href="node_modules/animate.css/animate.min.css"> -->
+    <link rel="stylesheet" href="node_modules/css3-animate-it/css/animations.css">
 </head>
 
 
@@ -218,12 +220,11 @@ if(!isset($_SESSION['hasVisited'])){
             <div class="row">
                 <div class="col-md-12">
                     <h3 class="text-uppercase mt0 font-400">¡premios!</h3>
-
                 </div>
 
-                <div class="row">
-                    <div class="col-md-4 col-sm-6 winner-box">
-                        <div class="schedule-box">
+                <div class="row ">
+                    <div class="col-md-4 col-sm-6 col-lg-4 winner-box animatedParent animateOnce">
+                        <div class="schedule-box animated  bounceInLeft slow">
                             <div class="price first">
                                 <i class="fas fa-map-marked-alt"></i>
                             </div>
@@ -233,8 +234,8 @@ if(!isset($_SESSION['hasVisited'])){
                             </p>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-6 winner-box">
-                        <div class="schedule-box">
+                    <div class="col-md-4 col-sm-6 col-lg-4 winner-box animatedParent animateOnce ">
+                        <div class="schedule-box animated  bounceInDown slow">
                             <div class="price second">
                                 <i class="fas fa-tablet-alt"></i>
                             </div>
@@ -242,8 +243,8 @@ if(!isset($_SESSION['hasVisited'])){
                             <p> </p>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-6 winner-box">
-                        <div class="schedule-box">
+                    <div class="col-md-4 col-sm-6 col-lg-4 winner-box  animatedParent animateOnce  ">
+                        <div class="schedule-box animated rotateInUpRight slower">
                             <div class="price third">
                                 <i class="far fa-clock"></i>
                             </div>
@@ -251,19 +252,17 @@ if(!isset($_SESSION['hasVisited'])){
                             <p></p>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-6 winner-box">
-                        <div class="schedule-box">
+                    <div class="col-md-4 col-sm-6 col-lg-4 winner-box col-md-offset-2 col-lg-offset-2 animatedParent animateOnce ">
+                        <div class="schedule-box animated growIn slower">
                             <div class="price forth">
-                                    <i class="fas fa-headphones-alt"></i>
+                                <i class="fas fa-headphones-alt"></i>
                             </div>
                             <h3>Auriculares</h3>
                             <p></p>
                         </div>
                     </div>
-                </div>
-                <div class="row sorteos ">
-                    <div class="col-md-4 col-sm-6 col-sm-offset-4 winner-box">
-                        <div class="schedule-box">
+                    <div class="col-md-4 col-sm-6 col-sm-offset-3 col-lg-4  winner-box col-md-offset-0  animatedParent animateOnce ">
+                        <div class="schedule-box animated rotateIn slower">
                             <div class="price ticket">
                                 <i class="fas fa-ticket-alt"></i>
                             </div>
@@ -616,10 +615,10 @@ if(!isset($_SESSION['hasVisited'])){
                 <div class="col-sm-3">
                     <a class="partner-box partner-box-7" href="https://www.gigared.com.ar/"></a>
                 </div>
-                <!-- <div class="col-sm-3">
-                    <a class="partner-box partner-box-10" href=""></a>
-                </div>
                 <div class="col-sm-3">
+                    <a class="partner-box partner-box-10" href="http://www.redinnovacionlocal.org/"></a>
+                </div>
+                <!-- <div class="col-sm-3">
                     <a class="partner-box partner-box-11"></a>
                 </div> -->
                 <!-- <div class="col-sm-3">
@@ -676,6 +675,8 @@ if(!isset($_SESSION['hasVisited'])){
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="bower_components/smooth-scroll/dist/js/smooth-scroll.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
+    <script src='node_modules/css3-animate-it/js/css3-animate-it.js'></script>
 </body>
 
 </html>

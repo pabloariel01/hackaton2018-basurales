@@ -505,7 +505,7 @@
   }
  
  .schedule-box {
-   min-height: 270px; 
+   min-height: 290px; 
    position: relative;
    background-color: #237760;
    color: #fff;
@@ -575,6 +575,9 @@
  }
  .partner .partner-box-9 {
    background: url(../images/partner/agentia.jpg) no-repeat center center/contain;
+ }
+ .partner .partner-box-10 {
+   background: url(../images/partner/RIL.jpeg) no-repeat center center/contain;
  }
  
  /* 
@@ -655,7 +658,8 @@
  }
  @media (min-width: 992px) {
    .schedule-box {
-     margin: 0;
+    min-height: 288px; 
+     /* margin: 0; */
    }
  
    .grid-item-md-6 {
