@@ -124,6 +124,9 @@ if(!isset($_SESSION['hasVisited'])){
             <p>
                 <a class='bases' href="assets/files/BasesyCondiciones.pdf">Bases y Condiciones</a>
             </p>
+            <p>
+                <a class='bases' href="assets/files/criteriosevalucacion.pdf">Criterios de Evalucacion</a>
+            </p>
         </div>
     </header>
 
@@ -135,14 +138,21 @@ if(!isset($_SESSION['hasVisited'])){
                     <h3 class="section-title">Problematica</h3>
 
                     <p>
-                        Diariamente la municipalidad recibe quejas por parte de los vecinos de los distintos barrios
-                        declarando la existencia de basurales ubicados generalmente en terrenos baldíos o abandonados.
+                        La Municipalidad de la Ciudad de Corrientes trabaja intensamente en la transformación hacia una
+                        Ciudad Sustentable, siendo hoy la basura uno de los principales ejes de trabajo.
+                        En dicho sentido, el Servicio de Atención al Ciudadano (0-800-5555-muni), recibe diariamente
+                        reclamos relacionados a la presencia de basurales en distintos puntos de ciudad los cuales se
+                        tornan cada vez más frecuentes.
 
                         <p>
-                            La municipalidad responde limpiando los basurales, pero en un plazo corto de tiempo vuelven
-                            a convertirse en un terreno utilizado para arrojar los desperdicios. Repitiéndose así el
-                            ciclo basural - queja - limpieza - basural. Con las consecuencias que significan para
-                            cuestiones como la salud tener un lugar repleto de residuos en el barrio.
+                            Existen diversos motivos por los cuales se crean dichos basurales urbanos, algunos de ellos
+                            tienen que ver con la conducta del vecino que, proveniente de otro barrio, arroja la basura
+                            en lugares que observa que hay montículos de la misma. De igual modo, muchos vecinos no
+                            respetan el horario de recolección de basura lo cual hace que, al sacar fuera de horario,
+                            los animales sueltos rompan las bolsas y se cree un basural. Finalmente, existe una
+                            conducta arraigada de sacar las bolsas de basura en esquinas y espacios donde anteriormente
+                            existían contenedores a pesar de que ellos han sido retirados ya que los vecinos consideran
+                            que el municipio tiene la función de limpiar.
                         </p>
                     </p>
 
@@ -173,6 +183,56 @@ if(!isset($_SESSION['hasVisited'])){
 
                 </div><!-- /.col-sm-6 -->
             </div><!-- /.row -->
+
+
+            <?php
+            // oculta desafios hasta hora de inicio
+                // $date = time();
+            
+                // $contestStart = strtotime('2018-10-26 8:50:00');
+
+                // if ($date > $contestStart) {
+                    
+            ?>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3 class="text-uppercase mt0 font-400 desafioTitle">
+                        Desafios
+                    </h3>
+                    <div class="desafios">
+                        <ul class="desafioList">
+                            <li>Generar herramientas que ayuden a prevenir la aparición de basurales, detectar su
+                                formación y desarrollar un sistema de erradicación de los mismos. </li>
+                            <li>Generar soluciones alternativas de recolección y limpieza que promuevan el uso
+                                eficiente de los recursos así como la reutilización de los residuos extraídos de los
+                                basurales</li>
+                            <li>Desarrollar herramientas innovadoras que permitan corregir la conducta social e
+                                individual de las personas que lleva a la creación y reincidencia de los basurales y
+                                empoderar a los vecinos en la prevención y cuidado de su barrio</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12" style="text-align:center">
+                    <h4 class="text-uppercase mt0 S desafioTitle" >
+                        Datos
+                    </h4>
+                    <div class="desafios" style="text-align:center;    font-weight: 800;">
+                        <p>Te invitamos a que ingreses a nuestro <a href="http://cor-cor-datos.paisdigital.modernizacion.gob.ar/">Portal
+                                de Datos Abiertos</a> para tener más información
+
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+            <?php
+            // }
+            ?>
         </div><!-- /.container -->
     </section>
 
@@ -297,10 +357,10 @@ if(!isset($_SESSION['hasVisited'])){
                             <div class="timeline-heading">
                                 <h4 class="timeline-title">Inscripción</h4>
                                 <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Hasta
-                                        24/10/2018</small></p>
+                                        25/10/2018</small></p>
                             </div>
                             <div class="timeline-body">
-                                <p>Inscripción abierta hasta el 24 de Octubre.</p>
+                                <p>Inscripción abierta hasta el 25 de Octubre.</p>
                             </div>
                         </div>
                     </li>
@@ -310,7 +370,7 @@ if(!isset($_SESSION['hasVisited'])){
                             <div class="timeline-heading">
                                 <h4 class="timeline-title">Acreditación</h4>
                                 <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>
-                                        26/10/2018 8:30 AM.</small></p>
+                                        26/10/2018 8:00 AM.</small></p>
                             </div>
                             <div class="timeline-body">
                                 <p>
